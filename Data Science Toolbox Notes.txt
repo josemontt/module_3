@@ -1,0 +1,83 @@
+Programas
+1 - Bash: The Shell, Terminal. Para navegar por el sistema de archivos, ejecutar programas, automatización de tareas. 
+2 - Git: Para llevar control de historia de tus archivos.
+3 - GitHUb: Lo mismo online. Permite compartir y trabajo colaborativo. Control de versiones, colaboración, comunicación.
+4 - Conda: Instala programas y paquetes. Gestiona versiones de software. Separa ambientes virtuales para diferentes versiones de software.
+5 - JupyterLab: Editor que permite mezclar texto y código en Jupyter notebooks.
+6 - VS Code: Visual Studio Code. Editor de código, ambiente de programación.
+7 - Jupyter Book: Publicaciones interactivas de alta calidad provenientes de un Jupyter notebook escrito con sintaxis Markdown
+8 - Markdown: código especializado para publicar resultados	
+
+
+BASH Shell / Terminal
+
+jupyter lab # abre la página de jupyter
+
+whoami # quien soy
+prompt # $/linea/cuadro parpadeante receptor de instrucciones
+pwd # muestra la carpeta actual
+ls # lista de carpetas y archivos de la carpeta actual
+ls -F # lista de elementos con información del tipo (/ carpeta, * ejecutable, . archivo)
+ls -F -a # incluye archivos escondidos, carpeta actual y carpeta padre
+ls -F carpeta # lista de elementos de la carpeta 'carpeta'
+
+cd carpeta # te posiciona en la carpeta 'carpeta'
+cd carpeta/subcarpeta # te posiciona en la carpeta 'subcarpeta'
+cd .. # vuelve al directorio padre
+cd ../.. # vuelve dos directorios padres
+cd ~ # atajo para carpeta home /home/user
+cd   # idem
+cd ~/carpeta/subcarpeta # atajo para dirección absoluta de subcarpeta
+cd - # atajo para ultima carpeta visitada 
+
+mkdir carpeta # crea la carpeta 'carpeta'
+mv archivo .. # mueve el archivo a la carpeta padre
+mv ../archivo . # mueve el archivo desde la carpeta padre a la carpeta actual
+mv archivo1 archivo2 # renombra el archivo1 como archivo2
+mv -v archivo1 archivo2 # idem with verbose
+mv -i archivo1 archivo2 # idem con interactividad, pide confirmación para no sobreescribir
+
+cp archivo .. # copia el archivo el la carpeta padre
+cp archivo archivo.bkp # crea un archivo de back up en el mismo directorio (la extensión no hace nada)
+cp -r carpeta carpeta_copia # crea un archivo de back up en el mismo directorio (la extensión no hace nada)
+
+rm archivo # elimina el archivo
+rm -v -i *.md # elimina todos los archivos markdown con verbose y confirmación
+
+* # comodín
+
+code archivo.md # abre o crea un archivo de código markdown y lo abre en Visual Studio Code (VS Code)
+code archivo.txt # abre o crea un archivo de código markdown y lo abre en Visual Studio Code (VS Code)
+code . # abre todos los archivos de la carpeta
+
+head nota.md # lee las primeras lineas de código o texto del archivo nota.md
+head -n 10 nota.md # lee las primeras 10 lineas de código o texto del archivo nota.md
+tail -n +2 nota.md # lee las últimas lineas de texto partiendo de la fila 2
+
+grep "palabra" archivo # devuelve todas las filas que tienen la palabra "palabra"
+cut -d 'separador' texto # corta las fila con el separador 'separador'
+sort  # ordena
+uniq -c # selecciona los únicos y cuenta
+
+history # devuelve la historia de todos los comandos
+
+comando1 | comando2 # pipe. concatena 2 comandos
+
+alias l="linea_de_comando" # crea un nickname para una línea de comando larga y muy recurrente
+
+man comando # muestra el manual de ayuda del comando
+
+navegación en texto less: 
+space: avanza
+b: retrocede
+q: quit salir
+/: inicia búsqueda
+enter: primer hallazgo de la búsqueda
+n: siguiente hallazgo de la búsqueda
+shift + n: anterior
+
+history | grep "ls" # devuelve todas las lineas de comando de la historia con la palabra "ls"
+
+wc # cuenta palabras, caracteres, etc
+wc # -l líneas, -c bytes, -m caracteres, -w palabras
+
